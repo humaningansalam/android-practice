@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gunu.blackbox"
+    android:versionCode="27"
+    android:versionName="6.0.1.26" >
+    <!-- 첫 번째 번호(major) : 컨셉이나 앱이 지향하는 기본 디자인이 변경된 경우
+         두 번째 번호(minor) : 기능 추가, 삭제 및 사양이 변경된 경우
+                              짝수 : 안정버전(Stable Version)
+                              홀수 : 개발 버전(Development Version)
+         세 번째 번호(point) : 버그 수정, 디자인 변경
+         네 번째 번호(Number of builds) : 빌드한 횟수
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 접속 권한 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 화면 꺼짐 방지 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" /> <!-- SD카드 수정 권한 -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlackBox"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <!-- android:requestLegacyExternalStorage="true" : Android 10(API 수준 29) 이상 -->
+        <!-- android:usesCleartextTraffic="true" :  모든 http 프로토콜 접속 허가, Android 9(APL Lv 28) -->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name =".SecondActivity"
+            android:label ="플레이어 액티비티"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="landscape" /><!-- 화면 회전 -->
+
+        <activity android:name =".FileListView"
+            android:label ="파일 리스트 보기"
+            android:theme="@style/Theme.BlackBox" />
+
+        <activity android:name =".SetDerectoryName"
+            android:label ="디렉토리 설정"
+            android:theme="@style/Theme.BlackBox" />
+    </application>
+
+</manifest>
