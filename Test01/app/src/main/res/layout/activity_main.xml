@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="145dp"
+        android:layout_height="51dp"
+        android:onClick="onButton2Clicked"
+        android:text="네이버접속하기"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="245dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButton3Clicked"
+        android:text="전화걸기"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButton1Clicked"
+        android:text="확인"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="245dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
